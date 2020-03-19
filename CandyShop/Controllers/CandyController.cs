@@ -17,5 +17,10 @@ namespace CandyShop.Controllers
             _candyrepository = candyRepository;
             _categoryRepository = categoryRepository;
         }
+
+        public ViewResult List()
+        {
+            return View(_candyrepository.GetAllCandy);
+        }
     }
 }
