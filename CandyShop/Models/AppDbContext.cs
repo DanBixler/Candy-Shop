@@ -54,8 +54,8 @@ namespace CandyShop.Models
                 Price = 4.95M,
                 Description = "Lorem ipsum",
                 CategoryId = 1,
-                ImageUrl = "~\\Images\\chocolateCandy.jpg",
-                ImageThumbnailUrl = "~\\Images\\thumbnails\\chocolateCandy-small.jpg",
+                ImageUrl = "\\Images\\chocolateCandy.jpg",
+                ImageThumbnailUrl = "\\Images\\thumbnails\\chocolateCandy-small.jpg",
                 IsInStock = true,
                 IsOnSale = false
             });
