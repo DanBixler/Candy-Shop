@@ -21,13 +21,20 @@ namespace CandyShop.Controllers
 
         public IActionResult List()
         {
-            //ViewBag.CurrentCategory = "Bestsellers";
-            //return View(_candyrepository.GetAllCandy);
-
+            
             var candyListViewModel = new CandyListViewModel();
             candyListViewModel.Candies = _candyrepository.GetAllCandy;
             candyListViewModel.CurrentCategory = "Bestsellers";
             return View(candyListViewModel);
+        }
+
+        public IActionResult Details(int id)
+        {
+            var candy = _candyrepository.GetCandyById(id);
+            if (candy == null)
+                return NotFound();
+
+            return View(candy);
         }
     }
 }
